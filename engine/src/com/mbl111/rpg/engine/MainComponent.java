@@ -1,9 +1,13 @@
 package com.mbl111.rpg.engine;
 
+import org.lwjgl.opengl.Display;
+
 public class MainComponent implements Runnable{
 
 	
 	
+	private BaseGame game;
+
 	public MainComponent() {
 		Window.create();
 	}
@@ -20,9 +24,13 @@ public class MainComponent implements Runnable{
 	
 	@Override
 	public void run() {
-		while (true){
+		while (!Display.isCloseRequested()){
 			
 		}
+	}
+	
+	public void setGame(BaseGame game) {
+		this.game = game;
 	}
 	
 	public static void main(String[] args) {

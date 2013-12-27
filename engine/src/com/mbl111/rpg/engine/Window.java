@@ -8,7 +8,7 @@ public class Window {
 
 	private static int WIDTH = 800;
 	private static int HEIGHT = 600;
-	
+
 	public static void create() {
 		try {
 			Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
@@ -18,10 +18,18 @@ public class Window {
 			System.exit(1);
 		}
 	}
-	
-	public static void setDisplayDimensions(int width, int height){
+
+	public static void setDisplayDimensions(int width, int height) {
 		HEIGHT = height;
 		WIDTH = width;
 	}
-	
+
+	public static int getWidth() {
+		return Display.getWidth();
+	}
+
+	public static int getHeight() {
+		return Display.getHeight();
+	}
+
 }
